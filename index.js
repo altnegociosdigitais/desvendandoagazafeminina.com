@@ -47,6 +47,47 @@ function previousSocialProof() {
   balls.item(currentSocialProofIndex).classList.add("active");
 }
 
+let xDown = null;
+let yDown = null;
+
+function handleTouchStart(evt) {
+  const firstTouch = evt.touches[0];
+  xDown = firstTouch.clientX;
+  yDown = firstTouch.clientY;
+}
+
+function handleTouchMove(evt) {
+  if (!xDown || !yDown) {
+    return;
+  }
+
+  let xUp = evt.touches[0].clientX;
+  let yUp = evt.touches[0].clientY;
+
+  let xDiff = xDown - xUp;
+  let yDiff = yDown - yUp;
+
+  if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    if (xDiff > 0) {
+      // Swipe left
+      nextSocialProof();
+    } else {
+      // Swipe right
+      previousSocialProof();
+    }
+  }
+
+  // Reset values
+  xDown = null;
+  yDown = null;
+}
+
+function handleTouchEnd(evt) {
+  // Reset values
+  xDown = null;
+  yDown = null;
+}
+
 function openCheckout() {
   window.open("https://pay.kiwify.com.br/fIVXeZd", "_blank").focus();
 }

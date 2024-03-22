@@ -94,7 +94,7 @@
       <script type="text/javascript">
         document.addEventListener("DOMContentLoaded", function () {
           /* ALTERE O VALOR 10 PARA OS SEGUNDOS EM QUE AS SEÇÕES VÃO APARECER */
-          var SECONDS_TO_DISPLAY = 1571;
+          var SECONDS_TO_DISPLAY = 20; //1571;
           var CLASS_TO_DISPLAY = ".esconder";
           /* DAQUI PARA BAIXO NAO PRECISA ALTERAR */
           var attempts = 0;
@@ -169,7 +169,12 @@
               >Dê só uma olhada em como esses sortudos estão hoje</span
             >
           </div>
-          <div class="cmp-social-proof-container">
+          <div
+            class="cmp-social-proof-container"
+            ontouchstart="handleTouchStart(event)"
+            ontouchmove="handleTouchMove(event)"
+            ontouchend="handleTouchEnd(event)"
+          >
             <button class="cmp-carousel-btn" onclick="previousSocialProof()">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -444,16 +449,8 @@
           <img class="cmp-carousel-img" src="assets/rectangle_04.png" alt="" />
           <img class="cmp-carousel-img" src="assets/rectangle_05.png" alt="" />
           <img class="cmp-carousel-img" src="assets/rectangle_06.png" alt="" />
-          <img
-            class="cmp-carousel-img md-07"
-            src="assets/rectangle_07.png"
-            alt=""
-          />
-          <img
-            class="cmp-carousel-img md-08"
-            src="assets/rectangle_08.png"
-            alt=""
-          />
+          <img class="cmp-carousel-img" src="assets/rectangle_07.png" alt="" />
+          <img class="cmp-carousel-img" src="assets/rectangle_08.png" alt="" />
         </div>
 
         <div class="cmp-two-sides cmp-divider-margin modules">
@@ -799,13 +796,11 @@
               >
               <h1 class="cmp-price text-bold">R$ 14,76</h1>
               <span class="text-bonus-title">ou R$ 147,00 à vista</span>
-              <a class="cmp-buy-btn" onclick="" onclick="openCheckout()"
-                >COMPRAR AGORA</a
-              >
-              <span class="cmp-buy-small"
+              <a class="cmp-buy-btn" onclick="openCheckout()">COMPRAR AGORA</a>
+              <span class="cmp-buy-small cmp-buy-small-card"
                 >“é menos que a halls preta que ela vai usar em você”</span
               >
-              <img src="assets/cartões_bandeiras.png" alt="Bandeiras Crédito" />
+              <img src="assets/cartoes_bandeiras.png" alt="Bandeiras Crédito" />
             </div>
           </div>
         </div>
@@ -888,7 +883,9 @@
             <div class="second">
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_01')"
                     >O que é o Desvendando a Gaza Feminina?</span
                   >
                   <button
@@ -928,7 +925,9 @@
               </div>
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_02')"
                     >Como vou receber o acesso ao curso?</span
                   >
                   <button
@@ -965,7 +964,9 @@
               </div>
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_03')"
                     >O curso realmente ajuda até se eu não tiver experiência
                     nenhuma?</span
                   >
@@ -1005,7 +1006,9 @@
               </div>
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_04')"
                     >Quanto tempo levo pra ter resultados?</span
                   >
                   <button
@@ -1044,7 +1047,9 @@
               </div>
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_05')"
                     >Quais são as formas de pagamento?</span
                   >
                   <button
@@ -1083,7 +1088,9 @@
               </div>
               <div class="cmp-faq-item">
                 <div class="cmp-faq-header">
-                  <span class="text-modules text-medium"
+                  <span
+                    class="text-modules text-medium"
+                    onclick="toggle('collapse_06')"
                     >A plataforma de pagamento é segura?</span
                   >
                   <button

@@ -103,7 +103,6 @@ body {
 .cmp-social-proof-img {
   border-radius: 0.5rem;
   flex-shrink: 0;
-  height: 36.125rem;
   width: 22.0625rem;
 }
 
@@ -273,6 +272,10 @@ body {
     > .text-bonus {
       margin-left: 2.19rem;
       margin-top: 1.31rem;
+    }
+
+    > .cmp-bonus-description {
+      max-width: 55%;
     }
   }
 
@@ -535,6 +538,7 @@ body {
   gap: 1.2rem;
   justify-content: space-between;
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 .cmp-faq-content {
@@ -567,12 +571,8 @@ body {
   margin-top: 3rem;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
-  .md-07, .md-08 {
-    display: none;
-  }
 }
 
 /* Buttons */
@@ -581,6 +581,7 @@ body {
   align-items: center;
   background: linear-gradient(90deg, #FBFF00 0%, #FF9D00 99.5%);
   border-radius: 3.125rem;
+  cursor: pointer;
   color: #000000;
   display: flex;
   flex-shrink: 0;
@@ -735,6 +736,50 @@ body {
     transition: padding 2s cubic-bezier(0, 1, 0, 1);
     transition: max-height .5s ease-in-out;
     padding: 1.5rem;
+  }
+}
+
+
+
+@media only screen and (max-width: 1480px) {
+  .cmp-bonus-split {
+    > .second {
+      .cmp-bonus-description {
+        max-width: 70%;
+      }
+    }
+  }
+
+  .cmp-bonus-container {
+    position: absolute;
+    z-index: 30;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .cmp-bonus-split {
+
+    > .first {
+
+      h3 {
+        font-size: 1.265rem;
+      }
+
+      .cmp-bonus-description {
+        max-width: 80%;
+      }
+    }
+
+    > .second {
+
+      h3 {
+        font-size: 1.265rem;
+      }
+
+      .cmp-bonus-description {
+        max-width: 100%;
+      }
+    }
   }
 }
 
@@ -978,10 +1023,6 @@ body {
     gap: 1rem;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-  
-    .md-07, .md-08 {
-      display: inline;
-    }
   }
 
   /* Buttons */
@@ -1032,5 +1073,19 @@ body {
   
   .text-bonus-small {
     font-size: 1.125rem;
+  }
+
+  .cmp-buy-small-card {
+    font-size: 0.6rem !important;
+  }
+}
+
+@media only screen and (max-width: 394px) {
+  .cmp-price {
+    font-size: 2.8rem;
+  }
+
+  .cmp-buy-btn {
+    width: 20rem;
   }
 }
