@@ -581,7 +581,6 @@ body {
   align-items: center;
   background: linear-gradient(90deg, #FBFF00 0%, #FF9D00 99.5%);
   border-radius: 3.125rem;
-  cursor: pointer;
   color: #000000;
   display: flex;
   flex-shrink: 0;
@@ -595,6 +594,7 @@ body {
 
   &:hover {
     background: linear-gradient(90deg, #ffbb00 0%, #ffa91e 99.5%);
+    cursor: pointer;
     transition: background linear 1.5s;
   }
 }
