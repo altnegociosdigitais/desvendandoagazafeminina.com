@@ -50,6 +50,49 @@ body {
   height: fit-content;
   width: 75%;
   max-width: 1200px;
+  overflow-x: hidden;
+}
+
+.cmp-fire-bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.cmp-pre-header {
+  margin-top: 1.5rem;
+  text-align: center;
+
+  overflow: hidden;
+  span {
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+.cmp-triple-grid {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr;
+  margin-top: 0.5rem;
+  position: relative;
+  align-items: center;
+}
+
+.cmp-left-divider {
+  width: 0;
+  height: 0;
+  border-right: 50vw solid transparent;
+  border-bottom: 3px solid #FF9D00;
+  position: relative;
+}
+
+.cmp-right-divider {
+  width: 0;
+  height: 0;
+  right: 0;
+  border-right: 50vw solid transparent;
+  border-bottom: 3px solid #FF9D00;
+  transform: rotate(180deg);
 }
 
 .hidden-container {
@@ -65,7 +108,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 4.75rem;
+  margin-top: 2rem;
   width: 70%;
 
   > span {
@@ -555,11 +598,15 @@ body {
   width: 60%;
 }
 
+.cmp-safe-site {
+  margin-top: 2rem;
+}
+
 .cmp-footer-divider {
   border-top: 0.125rem solid transparent;
   border-image: linear-gradient(90deg, #000 0%, #D9D9D9 26.5%, #FFF 52%, #D9D9D9 76%, #000 99.5%) 1;
   margin-bottom: 1.69rem;
-  margin-top: 4.19rem;
+  margin-top: 2rem;
   width: 75%;
 }
 
@@ -787,6 +834,7 @@ body {
 
   .main-container {
     padding: 1rem;
+    padding-top: 0;
     width: 100%;
   }
 
