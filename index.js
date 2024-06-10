@@ -89,5 +89,5 @@ function handleTouchEnd(evt) {
 }
 
 function openCheckout() {
-  window.open("https://pay.kiwify.com.br/fIVXeZd", "_blank").focus();
+  window.open("https://go.perfectpay.com.br/PPU38CO88FR", "_blank").focus();
 }
