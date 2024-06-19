@@ -769,6 +769,18 @@ body {
   color: #E80000;
 }
 
+.cmp-pre-header-upsell {
+  background-color: #ff2e00;
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  width: 100%;
+}
+
+.mt-upsell {
+  margin-top: 5rem;
+}
+
 /* Collapse */
 
 .collapse {
