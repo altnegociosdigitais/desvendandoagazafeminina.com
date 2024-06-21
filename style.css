@@ -772,13 +772,18 @@ body {
 .cmp-pre-header-upsell {
   background-color: #ff2e00;
   text-align: center;
-  padding: 1rem;
+  padding: 16px;
   position: absolute;
   width: 100%;
+  max-height: 110px;
 }
 
 .mt-upsell {
-  margin-top: 5rem;
+  margin-top: 130px;
+}
+
+.cmp-small-upsell {
+  max-width: 31rem;
 }
 
 /* Collapse */
